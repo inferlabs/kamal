@@ -33,6 +33,11 @@ class CommandsAccessoryTest < ActiveSupport::TestCase
             "/var/lib/redis:/data"
           ]
         },
+        "rabbitmq" => {
+          "image" => "rabbitmq:latest",
+          "host" => "1.1.1.7",
+          "ports" => ["5672", "15672"]
+        },
         "busybox" => {
           "image" => "busybox:latest",
           "host" => "1.1.1.7"
